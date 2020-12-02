@@ -2,14 +2,14 @@
 
 
 {{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
-@section('title', 'プロフィール編集')
+@section('title', '掲示板一覧')
 
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h1>プロフィール編集</h1>
+                <h1>掲示板一覧を表示</h1>
             </div>
         </div>
     </div>

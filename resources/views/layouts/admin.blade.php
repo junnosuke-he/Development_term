@@ -25,6 +25,8 @@
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
         {{-- この章の後半で作成するCSSを読み込みます --}}
         <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+	
+	
     </head>
     <body>
         <div id="app">
@@ -51,12 +53,20 @@
                 </div>
             </nav>
             {{-- ここまでナビゲーションバー --}}
-            
+             <nav class="navbar navbar-expand-md navbar-dark navbar-ctc">
+	<ul>
+		<li><a href="/">ホーム</a></li>
+		<li><a href="/bulletinboard">メンバー募集</a></li>
+		<li><a href="/question">質問</a></li>
+		<li><a href="/review">ボドゲレビュー</a></li>
+	</ul>
+</nav>
 
             <main class="py-4">
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                 @yield('content')
             </main>
         </div>
+       
     </body>
 </html>

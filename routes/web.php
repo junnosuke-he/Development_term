@@ -16,4 +16,9 @@ Route::get('/', function () {
 });
 
 
-    Route::get('/', 'Admin\HomeController@add');
+    Route::get('/bulletinboard', 'Admin\Bulletin_boardController@add');
+    Route::get('/question', 'Admin\QuestionController@add');
+    Route::get('/review', 'Admin\ReviewController@add');
+
+
+Route::get('/', 'Admin\HomeController@add');

@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class Question extends Controller
+class Bulletin_boardController extends Controller
 {
     //
-        public function index(Request $request)
+    public function add()
   {
-      return view('admin.question.index');
+      return view('admin.bulletin_board.index');
 }
 }

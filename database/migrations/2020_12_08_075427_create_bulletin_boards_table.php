@@ -22,9 +22,9 @@ class CreateBulletinBoardsTable extends Migration
             $table->char("area")->nullable();
             $table->number("member")->nullable();
             $table->char("create_user")->nullable();
-            $table->datetime("create_date")->nullable():
+            $table->dateTime('create_date')->nullable();
             $table->char("update_user")->nullable();
-            $table->datetime("update_date")->nullable():
+            $table->dateTime('update_date')->nullable();
             $table->timestamps();
         });
     }

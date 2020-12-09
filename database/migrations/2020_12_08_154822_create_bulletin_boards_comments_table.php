@@ -19,9 +19,9 @@ class CreateBulletinBoardsCommentsTable extends Migration
             $table->integer("user_id");
             $table->char("comment")->nullable();
             $table->char("create_user")->nullable();
-            $table->datetime("create_date")->nullable():
+            $table->dateTime('create_date')->nullable();
             $table->char("update_user")->nullable();
-            $table->datetime("update_date")->nullable():
+            $table->dateTime('update_date')->nullable();
             $table->timestamps();
         });
     }

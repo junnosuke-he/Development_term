@@ -20,9 +20,9 @@ class CreateReviewsCommentsTable extends Migration
             $table->char("comment")->nullable();
             $table->number("game_score")->nullable();
             $table->char("create_user")->nullable();
-            $table->datetime("create_date")->nullable():
+            $table->dateTime('create_date')->nullable();
             $table->char("update_user")->nullable();
-            $table->datetime("update_date")->nullable():
+            $table->dateTime('update_date')->nullable();
             $table->timestamps();
         });
     }

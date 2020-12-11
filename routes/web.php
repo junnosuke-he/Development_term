@@ -16,9 +16,10 @@ Route::get('/', function () {
 });
 
 
-    Route::get('/bulletinboard', 'Admin\Bulletin_boardController@add');
+    Route::get('/bulletin_board', 'Admin\Bulletin_boardController@add');
     Route::get('/question', 'Admin\QuestionController@add');
     Route::get('/review', 'Admin\ReviewController@add');
-
+    Route::get('/profile','Admin\ProfileController@add');
+    Route::post('/profile','Admin\ProfileController@create');
 
 Route::get('/', 'Admin\HomeController@add');

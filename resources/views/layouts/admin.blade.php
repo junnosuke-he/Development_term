@@ -31,37 +31,15 @@
     <body>
         <div id="app">
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
-            <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
-                <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
-
-                        </ul>
-
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            {{-- ここまでナビゲーションバー --}}
-             <nav class="navbar navbar-expand-md navbar-dark navbar-ctc">
-	<ul>
-		<li><a href="/">ホーム</a></li>
-		<li><a href="/bulletinboard">メンバー募集</a></li>
-		<li><a href="/question">質問</a></li>
-		<li><a href="/review">ボドゲレビュー</a></li>
-	</ul>
-</nav>
-
+            <div class="navber-top">
+                <div class="top"><a href="/">ボドゲ交流所</a></div>
+                <div class="login"><a href="profile">プロフィール</a></div>
+            </div>
+            <div class="navber-menu">
+                <div class="menu"><a href="/bulletin_board">メンバー募集</a></div>
+                <div class="menu"><a href="/question">質問</a></div>
+                <div class="menu"><a href="/review">ボドゲレビュー</a></div>
+            </div>
             <main class="py-4">
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                 @yield('content')

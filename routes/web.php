@@ -14,12 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-    Route::get('/bulletin_board', 'Admin\Bulletin_boardController@add');
+    Route::get('/bulletin_board', 'Admin\BulletinBoardController@add');
     Route::get('/question', 'Admin\QuestionController@add');
     Route::get('/review', 'Admin\ReviewController@add');
     Route::get('/profile','Admin\ProfileController@add');
     Route::post('/profile','Admin\ProfileController@create');
-
-Route::get('/', 'Admin\HomeController@add');
+    Route::get('/', 'Admin\HomeController@add');

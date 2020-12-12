@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class Bulletin_boardController extends Controller
+class BulletinBoardController extends Controller
 {
     //
     public function add()

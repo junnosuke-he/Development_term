@@ -16,7 +16,7 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->number("review_id");
-            $table->integer("user_id");
+            $table->number("user_id");
             $table->char("game_title")->nullable();
             $table->char("text")->nullable();
             $table->number("play_member")->nullable();

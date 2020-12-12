@@ -16,7 +16,7 @@ class CreateBulletinBoardsTable extends Migration
         Schema::create('bulletin_boards', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->number("bulletin_board_id");
-            $table->integer("user_id");
+            $table->number("user_id");
             $table->char("title")->nullable();
             $table->char("text")->nullable();
             $table->char("area")->nullable();

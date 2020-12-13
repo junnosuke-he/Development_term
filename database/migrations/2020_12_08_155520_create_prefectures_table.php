@@ -15,13 +15,12 @@ class CreatePrefecturesTable extends Migration
     {
         Schema::create('prefectures', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->number("prefecture_id");
-            $table->number("prefecture");
+            $table->integer("prefecture_id");
+            $table->char("prefecture");
             $table->char("create_user")->nullable();
             $table->dateTime('create_date')->nullable();
             $table->char("update_user")->nullable();
             $table->dateTime('update_date')->nullable();
-            $table->timestamps();
         });
     }
 

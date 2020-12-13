@@ -15,15 +15,14 @@ class CreateReviewsCommentsTable extends Migration
     {
         Schema::create('reviews_comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->number("review_id");
-            $table->number("user_id");
+            $table->integer("review_id");
+            $table->integer("user_id");
             $table->char("comment")->nullable();
-            $table->number("game_score")->nullable();
+            $table->integer("game_score")->nullable();
             $table->char("create_user")->nullable();
             $table->dateTime('create_date')->nullable();
             $table->char("update_user")->nullable();
             $table->dateTime('update_date')->nullable();
-            $table->timestamps();
         });
     }
 

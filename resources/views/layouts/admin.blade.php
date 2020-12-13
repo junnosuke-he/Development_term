@@ -31,15 +31,15 @@
     <body>
         <div id="app">
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
-            <div class="navber-top">
+            <div class="nav-top">
                 <div class="top"><a href="/">ボドゲ交流所</a></div>
-                <div class="login"><a href="profile">プロフィール</a></div>
+                <div class="login"><a href="/">プロフィール</a></div>
             </div>
-            <div class="navber-menu">
-                <div class="menu"><a href="/bulletin_board">メンバー募集</a></div>
-                <div class="menu"><a href="/question">質問</a></div>
-                <div class="menu"><a href="/review">ボドゲレビュー</a></div>
-            </div>
+            <ul class="nav-menu">
+                <li class="menu"><a href="/bulletin_board">メンバー募集</a></li>
+                <li class="menu"><a href="/question">質問</a></li>
+                <li class="menu"><a href="/review">ボドゲレビュー</a></li>
+            </ul>
             <main class="py-4">
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                 @yield('content')

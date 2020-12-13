@@ -15,14 +15,13 @@ class CreateBulletinBoardsCommentsTable extends Migration
     {
         Schema::create('bulletin_boards_comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->number("bulletin_board_id");
-            $table->number("user_id");
+            $table->integer("bulletin_board_id");
+            $table->integer("user_id");
             $table->char("comment")->nullable();
             $table->char("create_user")->nullable();
             $table->dateTime('create_date')->nullable();
             $table->char("update_user")->nullable();
             $table->dateTime('update_date')->nullable();
-            $table->timestamps();
         });
     }
 

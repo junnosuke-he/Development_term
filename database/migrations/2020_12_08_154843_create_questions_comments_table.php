@@ -15,14 +15,13 @@ class CreateQuestionsCommentsTable extends Migration
     {
         Schema::create('questions_comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->number("question_id");
-            $table->number("user_id");
+            $table->integer("question_id");
+            $table->integer("user_id");
             $table->char("comment")->nullable();
             $table->char("create_user")->nullable();
             $table->dateTime('create_date')->nullable();
             $table->char("update_user")->nullable();
             $table->dateTime('update_date')->nullable();
-            $table->timestamps();
         });
     }
 

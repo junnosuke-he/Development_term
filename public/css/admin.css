@@ -1,11 +1,77 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: #666;
   color: #000;
 }
 
-.navbar-menu {
-  flex-flow: row nowrap;
+.nav-top {
+  background-color: #fff;
+  display: table;
+  width: 80%;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.top {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "arial";
+}
+
+.top a {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "arial";
+  color: black;
+}
+
+.login {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 190px;
+  height: 60px;
+  background-color: silver;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.login a {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "arial";
+  color: black;
+}
+
+.nav-menu {
+  background-color: #fff;
+  display: table;
+  width: 80%;
+  table-layout: fixed;
+}
+
+.menu {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+.menu a {
+  display: block;
+  padding: 15px 0;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "arial";
 }
 

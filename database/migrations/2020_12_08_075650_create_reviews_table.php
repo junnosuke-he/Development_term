@@ -15,17 +15,16 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->number("review_id");
-            $table->number("user_id");
+            $table->integer("review_id");
+            $table->integer("user_id");
             $table->char("game_title")->nullable();
             $table->char("text")->nullable();
-            $table->number("play_member")->nullable();
+            $table->integer("play_member")->nullable();
             $table->char("game_image")->nullable();
             $table->char("create_user")->nullable();
             $table->dateTime('create_date')->nullable();
             $table->char("update_user")->nullable();
             $table->dateTime('update_date')->nullable();
-            $table->timestamps();
         });
     }
 

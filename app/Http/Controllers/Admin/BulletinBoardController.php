@@ -9,7 +9,11 @@ class BulletinBoardController extends Controller
 {
     //
     public function add()
-  {
+    {
       return view('admin.bulletin_board.index');
-}
+    }
+    public function create(Request $request)
+    {
+        return view('admin.bulletin_board.create');
+    }
 }

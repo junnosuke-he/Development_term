@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
     Route::get('/bulletin_board', 'Admin\BulletinBoardController@add');
+    Route::get('bulletin_board/create', 'Admin\BulletinBoardController@create');
     Route::post('bulletin_board/create', 'Admin\BulletinBoardController@create');
     Route::get('/question', 'Admin\QuestionController@add');
     Route::get('/review', 'Admin\ReviewController@add');

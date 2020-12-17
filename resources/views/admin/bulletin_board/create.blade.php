@@ -32,13 +32,13 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">本文</label>
+                        <label class="col-md-2">遊ぶ場所</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="area" value="{{ old('area') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">本文</label>
+                        <label class="col-md-2">募集人数</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="member" value="{{ old('member') }}">
                         </div>

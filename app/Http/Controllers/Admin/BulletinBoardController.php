@@ -14,9 +14,9 @@ class BulletinBoardController extends Controller
     }
     public function create(Request $request)
     {
-        $this->validate($request, BulletinBoard::$rules);
+        $this->validate($request, Bulletin_Board::$rules);
         
-        $bulletinboard = new BulletinBoard;
+        $bulletinboard = new Bulletin_Board;
         $form = $request->all();
         
         //課題１４

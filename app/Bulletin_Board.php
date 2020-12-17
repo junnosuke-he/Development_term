@@ -13,7 +13,5 @@ class Bulletin_Board extends Model
     public static $rules = array(
         'title' => 'required',
         'text' => 'required',
-        
-        
     );
 }

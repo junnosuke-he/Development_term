@@ -18,9 +18,9 @@ class CreatePrefecturesTable extends Migration
             $table->integer("prefecture_id");
             $table->char("prefecture");
             $table->char("create_user")->nullable();
-            $table->dateTime('create_date')->nullable();
+            $table->dateTime('create_at')->nullable();
             $table->char("update_user")->nullable();
-            $table->dateTime('update_date')->nullable();
+            $table->dateTime('update_at')->nullable();
         });
     }
 

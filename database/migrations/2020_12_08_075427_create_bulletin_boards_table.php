@@ -20,11 +20,11 @@ class CreateBulletinBoardsTable extends Migration
             $table->char("title");
             $table->char("text");
             $table->char("area")->nullable();
-            $table->integer("member")->nullable();
-            $table->char("create_user")->nullable();
-            $table->dateTime('create_date')->nullable();
-            $table->char("update_user")->nullable();
-            $table->dateTime('update_date')->nullable();
+            $table->char("member")->nullable();
+            $table->char("created_user")->nullable();
+            $table->dateTime('created_at')->nullable();
+            $table->char("updated_user")->nullable();
+            $table->dateTime('updated_at')->nullable();
         });
     }
 

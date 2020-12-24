@@ -3,7 +3,7 @@ body {
 	color: #000;
 }
 .bodoge{
-    width: 70%;
+    width: 1344px;
     height: 100%;
     margin : 0 auto;
 }
@@ -18,7 +18,7 @@ body {
     //display: table-cell;
     text-align: center;
     //vertical-align: middle;
-    //width: 75%;
+    width: 504px;
     //height: 100px;
     background-color: #fff;
     border-radius: 30px;
@@ -31,12 +31,14 @@ body {
     font-weight: bold;
     font-family: 'arial';
     color: black;
+    padding: 2px;
 }
 .login{
     //display: table-cell;
+    padding: 15px 0px;
     text-align: center;
     vertical-align: middle;
-    //width: 15%;
+    width: 186px;
     //height: 100px;
     background-color: silver;
     border: 1px solid black;
@@ -50,6 +52,7 @@ body {
     font-weight: bold;
     font-family: 'arial';
     color: black;
+    padding: 2px;
 }
 .nav-menu{
 	background-color: #fff;
@@ -57,7 +60,7 @@ body {
 	flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    //width: 85%;
+    width: 1344px;
     height: 65px;
     border-radius: 30px;
 	text-align: center;
@@ -83,10 +86,12 @@ body {
     background-color: #fff;
     border-radius: 30px;
     height: 100%;
-    margin : 0 auto;
+    width: 1344px;
+    //margin : 0 auto;
     font-size: 20px;
     font-weight: bold;
     font-family: 'arial';
+    padding: 10px;
 }
 .profile{
     background-color: #fff;

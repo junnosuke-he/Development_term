@@ -7,7 +7,11 @@
     <div class="container">
         <div class="home">
             <div>
-                <p>このサイトではボードゲームを一緒に遊ぶメンバーを募集したりボードゲームについての質問ができます。</p>
+                @foreach($pre as $todoufuken)
+                    <p>{{ $todoufuken->prefecture_id }}</p>
+                    <p>{{ $todoufuken->prefecture }}</p>
+                @endforeach
+                <h5>このサイトではボードゲームを一緒に遊ぶメンバーを募集したりボードゲームについての質問ができます。</h5>
                 <ul>
                     <li>プロフィールページでは自分のプロフィールを作成、編集することができます。</li>
                     <li>掲示板ページではボードゲームのメンバーを新規募集したり募集に対して参加などのコメントをすることができます。</li>

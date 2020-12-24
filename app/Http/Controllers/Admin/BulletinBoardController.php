@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Bulletin_Board;
+use App\BulletinBoard;
 class BulletinBoardController extends Controller
 {
     //
@@ -14,14 +14,11 @@ class BulletinBoardController extends Controller
     }
     public function create(Request $request)
     {
-        $this->validate($request, Bulletin_Board::$rules);
+        $this->validate($request, BulletinBoard::$rules);
         
-        $bulletinboard = new Bulletin_Board;
+        $bulletinboard = new BulletinBoard;
         $form = $request->all();
-        
-        //課題１４
         unset ($form['_token']);
-        
         $bulletinboard->fill($form);
         $bulletinboard->save();
         return view('admin.bulletin_board.create');
@@ -31,10 +28,10 @@ class BulletinBoardController extends Controller
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
             //検索されたら検索結果を取得する
-            $posts = Bulletin_Board::where('title',$cond_title)->get();
+            $posts = BulletinBoard::where('title',$cond_title)->get();
         } else {
             //それ以外はすべtのニュースを取得する
-            $posts = Bulletin_Board::all();
+            $posts = BulletinBoard::all();
         }
         return view('admin.bulletin_board.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
     }

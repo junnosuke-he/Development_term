@@ -10,7 +10,7 @@ class ReviewController extends Controller
     //
     public function add()
     {
-      return view('admin.review.index');
+      return view('admin.review.create');
     }
     public function create(Request $request)
     {
@@ -19,6 +19,7 @@ class ReviewController extends Controller
         $review = new Review;
         $form = $request->all();
         unset ($form['_token']);
+        unset($form['image']);
         $review->fill($form);
         $review->review_id = '33';
         $review->save();

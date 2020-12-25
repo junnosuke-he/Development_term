@@ -44,7 +44,7 @@
                             @foreach($posts as $review)
                                 <tr>
                                     <th>{{ $review->id }}</th>
-                                    <td>{{ \Str::limit($review->title, 100) }}</td>
+                                    <td>{{ \Str::limit($review->game_title, 100) }}</td>
                                     <td>{{ \Str::limit($review->text, 250) }}</td>
                                     <td>{{ \Str::limit($review->play_member, 30) }}</td>
                                 </tr>

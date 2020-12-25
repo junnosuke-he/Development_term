@@ -34,7 +34,7 @@
                     <div class="form-group row">
                         <label class="col-md-2">ゲーム詳細</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="text" value="{{ old('text' }}">
+                            <input type="text" class="form-control" name="text" value="{{ old('text') }}">
                         </div>
                     </div>
                     <div class>

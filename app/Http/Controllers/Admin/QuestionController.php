@@ -10,7 +10,7 @@ class QuestionController extends Controller
     //
      public function add()
   {
-      return view('admin.question.index');
+      return view('admin.question.create');
   }
     public function create(Request $request)
     {
@@ -20,7 +20,7 @@ class QuestionController extends Controller
         $form = $request->all();
         unset ($form['_token']);
         $question->fill($form);
-        $question->question_id = '22';
+        $question->question_id = 1;
         $question->save();
         return view('admin.question.create');
     }

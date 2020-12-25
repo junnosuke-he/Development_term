@@ -19,7 +19,7 @@ class CreateReviewsTable extends Migration
             $table->integer("user_id");
             $table->char("game_title")->nullable();
             $table->char("text")->nullable();
-            $table->integer("play_member")->nullable();
+            $table->char("play_member")->nullable();
             $table->char("game_image")->nullable();
             $table->char("create_user")->nullable();
             $table->dateTime('create_at')->nullable();

@@ -17,8 +17,8 @@ class CreateBulletinBoardsTable extends Migration
             $table->bigIncrements('id');
             $table->integer("bulletin_board_id");
             $table->integer("user_id");
-            $table->char("title");
-            $table->char("text");
+            $table->char("title")->nullable();
+            $table->char("text")->nullable();
             $table->char("area")->nullable();
             $table->char("member")->nullable();
             $table->char("created_user")->nullable();

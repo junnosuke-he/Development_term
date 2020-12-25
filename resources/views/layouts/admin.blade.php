@@ -32,7 +32,7 @@
         <div class="bodoge">
             <div class="nav-top">
                 <div class="top"><a href="/">ボードーゲーム交流所</a></div>
-                <div class="login"><a href="profile">プロフィール</a></div>
+                <div class="login"><a href="/profile">プロフィール</a></div>
             </div>
             <div class="nav-menu">
                 <div class="menu"><a href="/bulletin_board">メンバー募集</a></div>

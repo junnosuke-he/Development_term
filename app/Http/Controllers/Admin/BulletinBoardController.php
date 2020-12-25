@@ -20,6 +20,7 @@ class BulletinBoardController extends Controller
         $form = $request->all();
         unset ($form['_token']);
         $bulletinboard->fill($form);
+        $bulletinboard->bulletin_board_id = '11';
         $bulletinboard->save();
         return view('admin.bulletin_board.create');
     }

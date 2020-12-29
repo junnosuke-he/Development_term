@@ -14,15 +14,24 @@ class BulletinBoardController extends Controller
     }
     public function create(Request $request)
     {
-        $this->validate($request, BulletinBoard::$rules);
+        //$this->validate($request, BulletinBoard::$rules);
         
         $bulletinboard = new BulletinBoard;
-        $form = $request->all();
-        unset ($form['_token']);
-        $bulletinboard->fill($form);
-        $bulletinboard->bulletin_board_id = '11';
-        $bulletinboard->save();
-        return view('admin.bulletin_board.create');
+        // $test = $bulletinboard->max('bulletin_board_id');
+        // if (isset($test)) {
+            
+        // } else {
+             $test = ['bulletin_board_id' => '値がありません'];
+                    // @foreach($test as $tests)
+                    // {{ $tests->bulletin_board_id }} 
+                    // @endforeach
+        // }
+        // $form = $request->all();
+        // unset ($form['_token']);
+        // $bulletinboard->fill($form);
+        // $bulletinboard->bulletin_board_id = 1;
+        // $bulletinboard->save();
+        return view('admin.bulletin_board.create', ['test' => $test]);
     }
     public function index(Request $request)
     {
@@ -34,6 +43,7 @@ class BulletinBoardController extends Controller
             //それ以外はすべtのニュースを取得する
             $posts = BulletinBoard::all();
         }
-        return view('admin.bulletin_board.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
+        $test = ['bulletin_board_id' => '値がありません'];
+        return view('admin.bulletin_board.index', ['posts' => $posts, 'cond_title' =>$cond_title, 'test' => $test]);
     }
 }

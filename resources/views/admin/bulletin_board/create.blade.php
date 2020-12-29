@@ -10,6 +10,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h1>メンバー募集投稿</h1>
+                
                 <form action="{{ action('Admin\BulletinBoardController@create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)

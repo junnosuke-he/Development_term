@@ -18,6 +18,12 @@ class ReviewController extends Controller
         
         $review = new Review;
         $form = $request->all();
+        if (isset($form['image'])) {
+              $path = $request->file('image')->store('public/image');
+              $review->game_image = basename($path);
+          } else {
+              $review->game_image = null;
+          }
         unset ($form['_token']);
         unset($form['image']);
         $review->fill($form);

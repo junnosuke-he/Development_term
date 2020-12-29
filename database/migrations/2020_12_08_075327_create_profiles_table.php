@@ -17,7 +17,7 @@ class CreateProfilesTable extends Migration
             $table->bigIncrements('id');
             $table->integer("user_id");
             $table->integer("prefecture_id");
-            $table->char("name")->nullable();
+            $table->char("name");
             $table->char("gender")->nullable();
             $table->char("introduction")->nullable();
             $table->char('image_path')->nullable();

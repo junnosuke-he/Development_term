@@ -14,7 +14,7 @@ class QuestionController extends Controller
   }
     public function create(Request $request)
     {
-        $this->validate($request, QuestionController::$rules);
+        $this->validate($request, Question::$rules);
         
         $question = new Question;
         $form = $request->all();

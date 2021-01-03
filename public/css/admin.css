@@ -94,8 +94,39 @@ body {
   padding: 10px;
 }
 
-.profile {
+.profileform {
   background-color: #fff;
   border-radius: 30px;
+  padding: 10px;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.posting-itinerary {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+  height: 100%;
+}
+
+.bulletinboard {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+  height: 100%;
+}
+
+.question {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+  height: 100%;
+}
+
+.review {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+  height: 100%;
 }
 

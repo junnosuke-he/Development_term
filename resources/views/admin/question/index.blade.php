@@ -7,9 +7,8 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="question">
             <h2>質問一覧</h2>
-        </div>
         <div class="row">
             <div class="col-md-4">
                 <a href="{{ action('Admin\QuestionController@add') }}" role="button" class="btn btn-primary">新規作成</a>
@@ -42,7 +41,6 @@
                         <tbody>
                             @foreach($posts as $question)
                                 <tr>
-                                    <th>{{ $question->id }}</th>
                                     <td>{{ \Str::limit($question->title, 100) }}</td>
                                     <td>{{ \Str::limit($question->text, 250) }}</td>
                                 </tr>
@@ -52,5 +50,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection

@@ -7,9 +7,8 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="bulletinboard">
             <h2>メンバー募集一覧</h2>
-        </div>
         <div class="row">
             <div class="col-md-4">
                 <a href="{{ action('Admin\BulletinBoardController@add') }}" role="button" class="btn btn-primary">新規作成</a>
@@ -35,7 +34,6 @@
                     <table class="table table-dark">
                         <thead>
                             <tr>
-                                <th width="10%">ID</th>
                                 <th width="20%">タイトル</th>
                                 <th width="40%">本文</th>
                                 <th width="20%">遊ぶ場所</th>
@@ -45,7 +43,6 @@
                         <tbody>
                             @foreach($posts as $bulletinboard)
                                 <tr>
-                                    <th>{{ $bulletinboard->id }}</th>
                                     <td>{{ \Str::limit($bulletinboard->title, 100) }}</td>
                                     <td>{{ \Str::limit($bulletinboard->text, 250) }}</td>
                                     <td>{{ \Str::limit($bulletinboard->area, 30) }}</td>
@@ -57,5 +54,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection

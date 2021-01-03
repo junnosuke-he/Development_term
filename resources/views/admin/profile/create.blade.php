@@ -8,7 +8,7 @@
 @section('content')
     <div class="container">
         <div class="profile">
-            <div>
+            <div class="profileform">
                 <h1>プロフィール</h1>
                 <form action="{{ action('Admin\ProfileController@create') }}" method="post" enctype="multipart/form-data">
 
@@ -53,6 +53,7 @@
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="決定">
                 </form>
+                </div>
                 <div class="posting-itinerary">
                     <div class="posting-itinerary-top"><h4>自身の投稿</h4></div>
                     <div class="posting-itinerary-title"><p>メンバー募集</p></div>
@@ -63,7 +64,6 @@
                     <div class="posting-itinerary-title"><p>質問</p></div>
                     <div class="posting-itinerary-title"><p>レビュー</p></div>
                 </div>
-            </div>
         </div>
     </div>
 @endsection

@@ -148,6 +148,8 @@ return [
     'attributes' => [
         'title' => 'タイトル',
         'text' => '本文',
+        'name' => '名前',
+        'game_title' => 'ゲームタイトル',
         ],
 
 ];

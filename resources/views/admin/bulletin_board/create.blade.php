@@ -7,7 +7,7 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="bulletinboard">
             <div class="col-md-8 mx-auto">
                 <h1>メンバー募集投稿</h1>
                 

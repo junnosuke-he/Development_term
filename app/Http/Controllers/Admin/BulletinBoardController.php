@@ -15,23 +15,30 @@ class BulletinBoardController extends Controller
     public function create(Request $request)
     {
         //$this->validate($request, BulletinBoard::$rules);
-        
         $bulletinboard = new BulletinBoard;
-        // $test = $bulletinboard->max('bulletin_board_id');
-        // if (isset($test)) {
-            
-        // } else {
-             $test = ['bulletin_board_id' => '値がありません'];
-                    // @foreach($test as $tests)
-                    // {{ $tests->bulletin_board_id }} 
-                    // @endforeach
-        // }
-        // $form = $request->all();
-        // unset ($form['_token']);
-        // $bulletinboard->fill($form);
-        // $bulletinboard->bulletin_board_id = 1;
-        // $bulletinboard->save();
-        return view('admin.bulletin_board.create', ['test' => $test]);
+        $form = $request->all();
+        $max_id = $bulletinboard->max('bulletin_board_id');
+        if (empty($max_id)) {
+            $max_id = 1;
+        } else {
+            $max_id ++;
+        }
+        $form['bulletin_board_id'] = $max_id;
+        $form['user_id'] = '01';
+        unset ($form['_token']);
+        $bulletinboard->fill($form);
+        $bulletinboard->save();
+        
+       //一覧表示用 
+       $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            //検索されたら検索結果を取得する
+            $posts = BulletinBoard::where('title',$cond_title)->get();
+        } else {
+            //それ以外はすべtのニュースを取得する
+            $posts = BulletinBoard::all();
+        } 
+      return view('admin.bulletin_board.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
     }
     public function index(Request $request)
     {
@@ -43,7 +50,6 @@ class BulletinBoardController extends Controller
             //それ以外はすべtのニュースを取得する
             $posts = BulletinBoard::all();
         }
-        $test = ['bulletin_board_id' => '値がありません'];
-        return view('admin.bulletin_board.index', ['posts' => $posts, 'cond_title' =>$cond_title, 'test' => $test]);
+        return view('admin.bulletin_board.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
     }
 }

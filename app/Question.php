@@ -11,4 +11,5 @@ class Question extends Model
         'title' => 'required',
         'text' => 'required',
          );
+         protected $guarded = array('id');
 }

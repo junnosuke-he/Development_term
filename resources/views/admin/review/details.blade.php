@@ -10,6 +10,9 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h1>レビュー詳細を表示</h1>
+             @foreach($date as $review)
+             {{ ($review->game_title) }}
+             @endforeach
             </div>
         </div>
     </div>

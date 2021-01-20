@@ -21,10 +21,10 @@ class CreateReviewsTable extends Migration
             $table->char("text")->nullable();
             $table->char("play_member")->nullable();
             $table->char("game_image")->nullable();
-            $table->char("create_user")->nullable();
-            $table->dateTime('create_at')->nullable();
-            $table->char("update_user")->nullable();
-            $table->dateTime('update_at')->nullable();
+            $table->char("created_user")->nullable();
+            $table->dateTime('created_at')->nullable();
+            $table->char("updated_user")->nullable();
+            $table->dateTime('updated_at')->nullable();
         });
     }
 

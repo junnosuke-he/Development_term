@@ -25,6 +25,8 @@ Route::get('/', function () {
     Route::get('/review/create', 'Admin\ReviewController@add');
     Route::post('/review/create', 'Admin\ReviewController@create');
     Route::get('/review', 'Admin\ReviewController@index');
+    Route::get('/review/details', 'Admin\ReviewDetailsController@index');
+    
     
     Route::get('/profile','Admin\ProfileController@add');
     Route::post('/profile','Admin\ProfileController@create');

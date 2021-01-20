@@ -10,7 +10,7 @@
         <div class="review">
             <h2>レビュー一覧</h2>
         <div class="row">
-            <div class="col-md-4">
+            <div>
                 <a href="{{ action('Admin\ReviewController@add') }}" role="button" class="btn btn-primary">新規作成</a>
             </div>
             <div class="col-md-8">
@@ -42,10 +42,10 @@
                         <tbody>
                             @foreach($posts as $review)
                                 <tr>
-                                    <th>{{ $review->id }}</th>
                                     <td>{{ \Str::limit($review->game_title, 100) }}</td>
                                     <td>{{ \Str::limit($review->text, 250) }}</td>
                                     <td>{{ \Str::limit($review->play_member, 30) }}</td>
+                                    <td><div><a href="{{ action('Admin\ReviewDetailsController@index'), ['id' => $review->review_id] }}">詳細</a></div></td>
                                 </tr>
                             @endforeach
                         </tbody>

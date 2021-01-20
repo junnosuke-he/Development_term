@@ -22,7 +22,7 @@
                     <div class="form-group row">
                         <label class="col-md-2">タイトル</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="game_title" value="{{ old('game_title') }}">
+                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" value="更新">
+                    <input type="submit" class="btn btn-primary" value="決定">
                 </form>
             </div>
         </div>

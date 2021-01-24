@@ -26,15 +26,15 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">プレイ人数</label>
+                        <label class="col-md-2">ゲーム詳細</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="play_member" rows="20">{{ old('play_member') }}</textarea>
+                            <textarea class="form-control" name="text" rows="20">{{ old('text') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">ゲーム詳細</label>
+                        <label class="col-md-2">プレイ人数</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="text" value="{{ old('text') }}">
+                            <input type="text" class="form-control" name="play_member" value="{{ old('play_member') }}">
                         </div>
                     </div>
                     <div class>

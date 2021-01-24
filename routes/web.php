@@ -17,10 +17,12 @@ Route::get('/', function () {
     Route::get('/bulletin_board/create', 'Admin\BulletinBoardController@add');
     Route::post('bulletin_board/create', 'Admin\BulletinBoardController@create');
     Route::get('/bulletin_board', 'Admin\BulletinBoardController@index');
+    Route::get('/bulletin_board/details', 'Admin\BulletinBoardDetailsController@index');
     
     Route::get('/question/create', 'Admin\QuestionController@add');
     Route::post('/question/create', 'Admin\QuestionController@create');
     Route::get('/question', 'Admin\QuestionController@index');
+    Route::get('/question/details', 'Admin\QuestionDetailsController@index');
     
     Route::get('/review/create', 'Admin\ReviewController@add');
     Route::post('/review/create', 'Admin\ReviewController@create');

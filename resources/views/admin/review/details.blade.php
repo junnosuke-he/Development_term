@@ -7,12 +7,23 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="details">
             <div class="col-md-8 mx-auto">
-                <h1>レビュー詳細を表示</h1>
-             @foreach($date as $review)
-             {{ ($review->game_title) }}
-             @endforeach
+            @foreach($date as $review)
+            <div class=review_game_image>
+            {{ ($review->game_image) }}
+            </div>
+            <div class=review_game_title>
+            ゲームタイトル：{{ ($review->game_title) }}
+            </div>
+            <div class=review_play_member>
+            プレイ人数：{{ ($review->play_member) }}
+            </div>
+            <div class=review_text>
+            ゲーム詳細：{{ ($review->text) }}
+            </div>
+            
+            @endforeach
             </div>
         </div>
     </div>

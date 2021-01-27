@@ -35,7 +35,7 @@ class ReviewController extends Controller
               $review->game_image = null;
           }
         unset($form['image']);
-        unset ($form['_token']);
+        unset($form['_token']);
         $review->fill($form);
         $review->save();
         

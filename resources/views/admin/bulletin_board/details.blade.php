@@ -16,10 +16,10 @@
                 <div class=bulletinboard_text>
                 詳細：{{ ($bulletinboard->text) }}
                 </div>
-                <div class=bulletinboard_text>
+                <div class=bulletinboard_area>
                 場所：{{ ($bulletinboard->area) }}
                 </div>
-                <div class=bulletinboard_text>
+                <div class=bulletinboard_member>
                 人数：{{ ($bulletinboard->member) }}
                 </div>
                 @endforeach

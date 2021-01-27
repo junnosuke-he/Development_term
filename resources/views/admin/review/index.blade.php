@@ -45,8 +45,7 @@
                                     <td>{{ \Str::limit($review->game_title, 100) }}</td>
                                     <td>{{ \Str::limit($review->text, 250) }}</td>
                                     <td>{{ \Str::limit($review->play_member, 30) }}</td>
-                                    
-                                    <td><div><a href="{{ action('Admin\ReviewDetailsController@index', ['id' => $review->review_id]) }}">詳細</a></div></td>
+                                    <td><div><a href="{{ action('Admin\ReviewDetailsController@index', ['id' => $review->review_id]) }}"><button type="button" class="btn btn-primary">詳細</button></a></div></td>
                                 </tr>
                             @endforeach
                         </tbody>

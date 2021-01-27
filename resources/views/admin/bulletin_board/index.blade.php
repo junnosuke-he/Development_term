@@ -47,7 +47,7 @@
                                     <td>{{ \Str::limit($bulletinboard->text, 250) }}</td>
                                     <td>{{ \Str::limit($bulletinboard->area, 30) }}</td>
                                     <td>{{ \Str::limit($bulletinboard->member, 10) }}</td>
-                                    <td><div><a href="{{ action('Admin\BulletinBoardDetailsController@index', ['id' => $bulletinboard->bulletinboard_id]) }}">詳細</a></div></td>
+                                    <td><div><a href="{{ action('Admin\BulletinBoardDetailsController@index', ['id' => $bulletinboard->id]) }}">詳細</a></div></td>
                                 </tr>
                             @endforeach
                         </tbody>

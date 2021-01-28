@@ -61,4 +61,21 @@ class ReviewController extends Controller
         }
         return view('admin.review.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
     }
+    public function delete(Request $request)
+    {
+     
+        $review = Review::find($request->id);
+      // 削除する
+        $review->delete();
+      //一覧表示用 
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            //検索されたら検索結果を取得する
+            $posts = Review::where('title',$cond_title)->get();
+        } else {
+            //それ以外はすべtのニュースを取得する
+            $posts = Review::all();
+        }
+        return view('admin.review.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
+  }  
 }

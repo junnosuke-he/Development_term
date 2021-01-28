@@ -14,7 +14,7 @@ class QuestionController extends Controller
   }
     public function create(Request $request)
     {
-        //$this->validate($request, Question::$rules);
+        $this->validate($request, Question::$rules);
         $question = new Question;
         $form = $request->all();
         $max_id = $question->max('question_id');
@@ -52,4 +52,21 @@ class QuestionController extends Controller
         }
         return view('admin.question.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
     }
+    public function delete(Request $request)
+    {
+     
+        $question = Question::find($request->id);
+      // 削除する
+        $question->delete();
+      //一覧表示用 
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            //検索されたら検索結果を取得する
+            $posts = Question::where('title',$cond_title)->get();
+        } else {
+            //それ以外はすべtのニュースを取得する
+            $posts = Question::all();
+        }
+        return view('admin.question.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
+  }  
 }

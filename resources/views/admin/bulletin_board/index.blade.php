@@ -36,7 +36,7 @@
                             <tr>
                                 <th width="20%">タイトル</th>
                                 <th width="40%">本文</th>
-                                <th width="20%">遊ぶ場所</th>
+                                <th width="10%">遊ぶ場所</th>
                                 <th width="10%">募集人数</th>
                             </tr>
                         </thead>
@@ -47,7 +47,16 @@
                                     <td>{{ \Str::limit($bulletinboard->text, 250) }}</td>
                                     <td>{{ \Str::limit($bulletinboard->area, 30) }}</td>
                                     <td>{{ \Str::limit($bulletinboard->member, 10) }}</td>
-                                    <td><div><a href="{{ action('Admin\BulletinBoardDetailsController@index', ['id' => $bulletinboard->id]) }}">詳細</a></div></td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ action('Admin\BulletinBoardDetailsController@index', ['id' => $bulletinboard->id]) }}"><button type="button" class="btn btn-primary">詳細</button></a>
+                                        </div>
+                                    </td>
+                                    <td>    
+                                        <div>  
+                                            <a href="{{ action('Admin\BulletinBoardController@delete', ['id' => $bulletinboard->id]) }}"><button type="button" class="btn btn-primary">削除</button></a>
+                                        </div>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

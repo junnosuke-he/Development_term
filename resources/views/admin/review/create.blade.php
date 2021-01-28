@@ -40,7 +40,7 @@
                     <div class>
                         <label class="col-md-2">ゲーム画像</label>
                         <div class="col-md-10">
-                            <input type="file" class="form-control-file" name="game_image">
+                            <input type="file" class="form-control-file" name="image">
                         </div>
                     </div>
                     {{ csrf_field() }}

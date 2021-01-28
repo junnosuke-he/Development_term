@@ -14,7 +14,7 @@ class BulletinBoardController extends Controller
     }
     public function create(Request $request)
     {
-        //$this->validate($request, BulletinBoard::$rules);
+        $this->validate($request, BulletinBoard::$rules);
         $bulletinboard = new BulletinBoard;
         $form = $request->all();
         $max_id = $bulletinboard->max('bulletin_board_id');
@@ -52,4 +52,22 @@ class BulletinBoardController extends Controller
         }
         return view('admin.bulletin_board.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
     }
+    public function delete(Request $request)
+    {
+     
+      $bulletinboard = BulletinBoard::find($request->id);
+      // 削除する
+      $bulletinboard->delete();
+      //一覧表示用 
+       $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            //検索されたら検索結果を取得する
+            $posts = BulletinBoard::where('title',$cond_title)->get();
+        } else {
+            //それ以外はすべtのニュースを取得する
+            $posts = BulletinBoard::all();
+        } 
+      return view('admin.bulletin_board.index', ['posts' => $posts, 'cond_title' =>$cond_title]);
+  }  
+
 }

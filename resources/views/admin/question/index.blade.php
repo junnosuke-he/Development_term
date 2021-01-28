@@ -43,7 +43,16 @@
                                 <tr>
                                     <td>{{ \Str::limit($question->title, 100) }}</td>
                                     <td>{{ \Str::limit($question->text, 250) }}</td>
-                                    <td><div><a href="{{ action('Admin\QuestionDetailsController@index', ['id' => $question->question_id]) }}">詳細</a></div></td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ action('Admin\QuestionDetailsController@index', ['id' => $question->id]) }}"><button type="button" class="btn btn-primary">詳細</button></a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ action('Admin\QuestionController@delete', ['id' => $question->id]) }}"><button type="button" class="btn btn-primary">削除</button></a>
+                                        </div>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -10,7 +10,7 @@
         <div class="details">
             <div class="col-md-8 mx-auto">
                 @foreach($date as $review)
-                    <img src="{{ asset('storage/image/' . $review->game_image) }}">
+                    <img src="{{ $review->game_image) }}">
                     <div class=review_game_title>
                         ゲームタイトル：{{ ($review->game_title) }}
                     </div>

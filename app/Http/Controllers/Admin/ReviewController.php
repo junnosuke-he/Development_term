@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Review;
+use Storage;
 class ReviewController extends Controller
 {
     //
@@ -29,8 +30,8 @@ class ReviewController extends Controller
         
         
         if (isset($form['image'])) {
-              $path = $request->file('image')->store('public/image');
-              $review->game_image = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+            $review->game_image = Storage::disk('s3')->url($path);
           } else {
               $review->game_image = null;
           }
